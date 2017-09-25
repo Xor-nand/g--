@@ -9,7 +9,7 @@ function compile {
 }
 
 function main {
-	if diff $1 .$1
+	if diff $1 $1_
 	then
 		echo " < reloading file "
 		if `echo $1 | grep -qE '.cpp'`
@@ -23,11 +23,11 @@ function main {
 		return 1
 		fi
 	fi
-	rm .$1
+	rm $1_
 }
 
 function update {
-	cp $1 .$1
+	cp $1 $1_
 }
 
 echo " > file is $1"
