@@ -1,0 +1,18 @@
+function startup {
+	if [ -z "1" ];then
+		echo "> Error: missing file operand"
+		exit 1
+	elif `echo $1 | grep -qE '.cpp'`;then
+		echo "> Error: filename not *.cpp"
+		exit 1
+	else
+		loop $1
+	fi
+}
+if [ -e a.out ]
+                        then
+                                mv a.out a.out.save
+                        fi
+function loop() {
+
+}
